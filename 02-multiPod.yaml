@@ -1,3 +1,5 @@
+# Multi container pod
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -7,4 +9,5 @@ spec:
   - name: nginx-container
     image: nginx:latest
   - name: busybox-container
-    image: busybox
+    image: centos7
+    command: ["sleep", "10000"]
