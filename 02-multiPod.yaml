@@ -9,5 +9,5 @@ spec:
   - name: nginx-container
     image: nginx:latest
   - name: busybox-container
-    image: centos7
+    image: centos:7
     command: ["sleep", "10000"]
