@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: configMap
+metadata:
+  name: ecomm-cm
+data:
+  BATCH: "55"
+  ENVIRONMENT: "user-interface.properties"
+  MONGO_URL: "mongo.crp.cc"
+  APP: ecomm
