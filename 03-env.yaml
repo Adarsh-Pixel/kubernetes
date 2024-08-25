@@ -8,7 +8,7 @@ spec:
     image: nginx:latest
     env:
     - name: BATCH
-      value: "55"
+      value: "55"               # Ensure to enclose the numerical in quotes
     - name: ENVIRONMENT
       value: dev
     - name: MONGO_URL
