@@ -8,6 +8,7 @@ spec:
   replicas: 3
   strategy:
     type: RollingUpdate
+    maxUnavailable: 20 
   selector:
     matchLabels:
       app: nginx
