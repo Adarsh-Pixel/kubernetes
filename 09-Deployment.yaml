@@ -24,7 +24,7 @@ spec:
         ports:
         - containerPort: 80
 
-
+# Cluster IP svc
 ---
 
 # apiVersion: v1
@@ -39,6 +39,7 @@ spec:
 #       port: 80
 #       targetPort: 80
 
+#Loadbalancer svc
 ---
 apiVersion: v1
 kind: Service
@@ -52,3 +53,19 @@ spec:
       port: 80
       targetPort: 80
   type: LoadBalancer
+
+---
+#NodePort SVC
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: my-service
+# spec:
+#   type: NodePort
+#   selector:
+#     app.kubernetes.io/name: MyApp
+#   ports:
+#     - port: 80
+#       targetPort: 80
+#       # will allocate a port from a range (default: 30000-32767)
+#       nodePort: 30007   # port number which would be reaching the K8 node
