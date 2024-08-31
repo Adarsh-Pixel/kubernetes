@@ -27,10 +27,23 @@ spec:
 
 ---
 
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: nginx-svc
+# spec:
+#   selector:
+#     app: nginx
+#   ports:
+#     - protocol: TCP
+#       port: 80
+#       targetPort: 80
+
+---
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc
+  name: nginx-alb-svc
 spec:
   selector:
     app: nginx
@@ -38,3 +51,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
+  type: LoadBalancer
