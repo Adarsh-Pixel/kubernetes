@@ -1,6 +1,5 @@
-# FROM            centos:7
+FROM            nginx:latest
 RUN             yum install epel-release -y
-RUN             yum install nginx -y
 COPY            index.html  /usr/share/nginx/html/index.html
 EXPOSE          80
 ENV             ENVIRONMENT=dev
