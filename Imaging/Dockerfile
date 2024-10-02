@@ -4,7 +4,7 @@
 # ENV             ENVIRONMENT=dev
 # CMD             ["nginx", "-g", "daemon off;"]
 
-FROM            centos:7
+FROM            nginx:latest
 # CMD can always be overriden from the command line
 CMD             ["google.com"]
 # whatever you defined in entrypoint cannot be override
