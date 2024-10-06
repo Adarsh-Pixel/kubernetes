@@ -13,4 +13,4 @@
 
 FROM            centos:7
 CMD             ["google.com"]
-ENTRYPOINT      ["echo"]
+ENTRYPOINT      ["ping", "-c" , "5" ]
